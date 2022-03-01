@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Video</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">SKYIO-158257357-5831</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">dcbd6598-f24b-43fb-99c6-28ce9177fb09</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://skyintranetoperativa.sky.com.mx/sites/IntranetOperativa/_layouts/15/DocIdRedir.aspx?ID=SKYIO-158257357-5831, SKYIO-158257357-5831</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+    <center>
+        <video class="video" src="video.mp4" autoplay controls width="1800" controlsList="nodownload" ></video>
+    </center>   
+</body>
+<style>
+.video
+{
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: .5%;
+    
+}
+video::-internal-media-controls-download-button {display:none;}
+video::-webkit-media-controls-enclosure {overflow:hidden;}
+video::-webkit-media-controls-panel {width: calc(100% + 18px); /* Ajustar los pixeles segun se necesite */}
+</style>
+<script>
+    // funcion para evitar copiar contenido
+    
+    document.oncontextmenu = function() 
+        {
+            return false
+        }
+        function right(e) 
+        {
+            var msg = "No disponible";
+            if (navigator.appName == 'Netscape' && e.which == 3) 
+            {
+             
+                return false;
+            }
+            else if (navigator.appName == 'Microsoft Internet Explorer' && event.button==2) 
+            {
+           
+                return false;
+            }
+            return true;
+        }
+        document.onmousedown = right;
+
+
+</script>
+</html>
