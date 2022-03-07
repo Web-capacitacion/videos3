@@ -6,11 +6,17 @@
 
 <body>
     <center>
-             <video class="video" src="dos.mp4" autoplay controls width="1800" controlsList="nodownload" >
-              <source src="dos.mp4" type="video/mp4">
-            <source src="dos.mp4" type="video/webm">
-            <source src="dos.mp4" type="video/ogg">  
+        <div style="text-align:center"> 
+            <button onclick="playPause()">Comenzar / pausar</button> 
 
+            <br><br>
+            <video id="video1" width="70%">
+              <source src="dos.mp4" type="video/mp4">
+              <source src="dos.mp4" type="video/ogg">
+              Your browser does not support HTML video.
+            </video>
+          </div> 
+        
         </video>
     </center>   
 </body>
@@ -52,5 +58,27 @@ video::-webkit-media-controls-panel {width: calc(100% + 18px); /* Ajustar los pi
         document.onmousedown = right;
 
 
+
+
+        var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
 </script>
 </html>
